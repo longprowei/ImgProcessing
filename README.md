@@ -1,8 +1,6 @@
 # Image Processing
 This program is for processing the images in many different sizes.
 
-This program is for processing the images in many different sizes.
-
 # How to use it
 Make sure you have installed node in your operating system.
 Run `npm install`.
