@@ -26,7 +26,7 @@ for (let i of allImages) {
     let name = i.substr(0, pos);
     let ext = i.substr(pos + 1);
     for (let j of jsonContent.targets) {
-        sharp(`images/${i}`).resize(parseInt(j.width)).toFile(`dist/${j.prefix}-${name}.${ext}`, (error) => {
+        sharp(`images/${i}`).resize(parseInt(j.width)).toFile(`dist/${name}-${j.suffix}.${ext}`, (error) => {
             if (error) {
                 console.log('Errors:');
                 console.log(error);

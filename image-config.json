@@ -1,12 +1,12 @@
 {
     "targets": [{
-        "prefix": "lg",
+        "suffix": "lg",
         "width": "200"
     }, {
-        "prefix": "md",
+        "suffix": "md",
         "width": "150"
     }, {
-        "prefix": "sm",
+        "suffix": "sm",
         "width": "100"
     }]
 }
