@@ -1,0 +1,12 @@
+{
+    "targets": [{
+        "prefix": "lg",
+        "width": "200"
+    }, {
+        "prefix": "md",
+        "width": "150"
+    }, {
+        "prefix": "sm",
+        "width": "100"
+    }]
+}
