@@ -31,7 +31,8 @@ for (let i of allImages) {
         if (!fs.existsSync(suffixFolder)) {
             fs.mkdirSync(suffixFolder);
         }
-        sharp(`images/${i}`).resize(parseInt(target.width)).toFile(`${suffixFolder}/${name}-${target.suffix}.${ext}`, (error) => {
+        let imageName = `${suffixFolder}/${name}${target.noSuffixOnImage ? "" : "-" + target.suffix}.${ext}`
+        sharp(`images/${i}`).resize(parseInt(target.width)).toFile(imageName, (error) => {
             if (error) {
                 console.log('Errors:');
                 console.log(error);

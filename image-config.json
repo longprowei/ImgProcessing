@@ -11,5 +11,13 @@
     }, {
         "suffix": "sm",
         "width": "100"
+    }, {
+        "suffix": "ios-lg",
+        "noSuffixOnImage": "true",
+        "width": "800"
+    }, {
+        "suffix": "ios-md",
+        "noSuffixOnImage": "true",
+        "width": "500"
     }]
 }
