@@ -25,8 +25,13 @@ for (let i of allImages) {
     let pos = i.lastIndexOf('.');
     let name = i.substr(0, pos);
     let ext = i.substr(pos + 1);
-    for (let j of jsonContent.targets) {
-        sharp(`images/${i}`).resize(parseInt(j.width)).toFile(`dist/${name}-${j.suffix}.${ext}`, (error) => {
+    for (let target of jsonContent.targets) {
+        // use suffix to create subfolder
+        let suffixFolder = distDir + `/${target.suffix}`;
+        if (!fs.existsSync(suffixFolder)) {
+            fs.mkdirSync(suffixFolder);
+        }
+        sharp(`images/${i}`).resize(parseInt(target.width)).toFile(`${suffixFolder}/${name}-${target.suffix}.${ext}`, (error) => {
             if (error) {
                 console.log('Errors:');
                 console.log(error);

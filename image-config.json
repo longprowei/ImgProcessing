@@ -1,5 +1,8 @@
 {
     "targets": [{
+        "suffix": "xl",
+        "width": "500"
+    }, {
         "suffix": "lg",
         "width": "200"
     }, {
